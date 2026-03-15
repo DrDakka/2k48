@@ -1,0 +1,43 @@
+{
+  "name": "2048",
+  "version": "1.0.0",
+  "description": "2048 game implemented in vanilla JavaScript",
+  "keywords": [
+    "2048",
+    "game",
+    "javascript",
+    "vanilla-js"
+  ],
+  "author": "",
+  "license": "GPL-3.0",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html",
+    "deploy": "parcel build src/index.html --public-url /2k48/ && gh-pages -d dist",
+    "format": "prettier --ignore-path .prettierignore --write './src/**/*.{html,css,scss}'",
+    "lint": "eslint src && stylelint 'src/**/*.scss' --allow-empty-input",
+    "test": "jest",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
+  },
+  "devDependencies": {
+    "@linthtml/linthtml": "^0.9.6",
+    "@parcel/transformer-sass": "^2.12.0",
+    "cypress": "^13.13.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-cypress": "^3.3.0",
+    "eslint-plugin-node": "^11.1.0",
+    "gh-pages": "^6.3.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "mochawesome": "^7.1.3",
+    "parcel": "^2.12.0",
+    "prettier": "^3.3.2",
+    "stylelint": "^16.7.0",
+    "stylelint-config-standard-scss": "^13.0.0",
+    "stylelint-scss": "^6.4.1"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
+}
